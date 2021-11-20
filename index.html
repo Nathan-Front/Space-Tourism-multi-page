@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Orbitron&family=Pacifico&family=Quicksand&family=Roboto:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Space tourism multi-page website</title>
+</head>
+<body>
+    <header>
+        <img src="images/shared/logo.svg" alt="" aria-label="hidden">
+        <nav>
+            <div class="burger" id="burgerMenuOpen"><img src="images/shared/icon-hamburger.svg" alt=""></div>
+            <div class="burger-close" id="burgerMenuClose"><img src="images/shared/icon-close.svg" alt=""></div>
+            <ul class="navMenu" id="menuLinks">
+                <li><button id="home" class="nav-hover"><span>00</span> home</button></li>
+                <li><button id="destination" class="nav-hover"><span>01</span> destination</button></li>
+                <li><button id="crew" class="nav-hover"><span>02</span> crew</button></li>
+                <li><button id="technology" class="nav-hover"><span>03</span>  technology</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Home index contents-->
+        <section id="home-content">
+            <div id="home-title">
+                <h1> so, you want to travel to
+                    <span>space</span>
+                </h1>
+                <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience! Explore</p> 
+            </div>
+            <div id="home-div">
+                <button>explore</button> 
+            </div>
+        </section>
+        <!--Destination index contents-->
+        <section id="destination-content">
+            <div id="destination-title">
+                <h2><span>01</span> pick your destination</h2>
+                <div class="destination-location">
+                    <div id="moon" class="location">
+                        <img id="destination-image" class="onCurrent" src="images/destination/image-moon.png" alt="">
+                    </div>
+                    <div id="mars" class="location">
+                        <img src="images/destination/image-mars.png" alt="">
+                    </div>
+                    <div id="europa" class="location">
+                        <img src="images/destination/image-europa.png" alt="">
+                    </div>
+                    <div id="titan" class="location">
+                        <img src="images/destination/image-titan.png" alt="">
+                    </div> 
+                    <div id="extra" class="location">
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="destination-div">
+               <!-- <ul>
+                    <li><a href="#moon" onclick="moon()" class="destination-nav-hover">moon</a></li>
+                    <li><a href="#mars" onclick="mars()" class="destination-nav-hover">mars</a></li>
+                    <li><a href="#europa" onclick="europa()" class="destination-nav-hover">europa</a></li>
+                    <li><a href="#titan" onclick="titan()" class="destination-nav-hover">titan</a></li>
+                </ul>-->
+                <ul>
+                    <li><a href="#moon" onclick="travelDestination(1)" class="destination-nav-hover">moon</a></li>
+                    <li><a href="#mars" onclick="travelDestination(2)" class="destination-nav-hover">mars</a></li>
+                    <li><a href="#europa" onclick="travelDestination(3)" class="destination-nav-hover">europa</a></li>
+                    <li><a href="#titan" onclick="travelDestination(4)" class="destination-nav-hover">titan</a></li>
+                </ul>
+                <h3 id="destination-head">moon</h3>
+                <p id="destination-details">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                <div class="detail-content">
+                    <div class="detail-content1">
+                        <small>ave. distance</small>
+                        <strong id="destination-distance">384,400 km</strong>
+                    </div>
+                    <div class="detail-content2">
+                        <small>Est. travel time</small>
+                        <strong id="destination-travel">3 days</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Crew index contents-->
+        <section id="crew-content">
+            <div id="crew-title">
+                <h2><span>02</span> meet your crew</h2>
+                <div class="slider-content">
+                    <div class="slides" id="slides1">
+                        <h3><span>Commander</span>
+                        Douglas Hurley</h3>
+                        <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                    </div>
+                    <div class="slides" id="slides2">
+                        <h3><span>Pilot</span>
+                        Victor Glover</h3>
+                        <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+                    </div>
+                    <div class="slides" id="slides3">
+                        <h3><span>Mission Specialist</span>
+                        Mark Shuttleworth</h3>
+                        <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                    </div>
+                    <div class="slides" id="slides4">
+                        <h3><span>flight engineer</span>
+                        annousheh ansari</h3>
+                        <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                    </div>
+                </div>
+                <div class="dots-container">
+                    <a href="#slides1" class="dot" onclick="currentCrew(1)"></a> 
+                    <a href="#slides2" class="dot" onclick="currentCrew(2)"></a> 
+                    <a href="#slides3" class="dot" onclick="currentCrew(3)"></a> 
+                    <a href="#slides4" class="dot" onclick="currentCrew(4)"></a> 
+                </div>
+            </div>
+            <div id="crew-div">
+                <img id="crew-image" src="images/crew/image-douglas-hurley.png" alt="">
+            </div>
+        </section>
+        <!--Technology index contents-->
+        <section id="technology-content">
+            <div id="technology-title">
+                <h2><span>03</span> space launch 101</h2>
+                <div class="tech-cont">
+                    <div class="dots-container2">
+                        <a href="#tech-info1" class="tech-dot techy-dot" onclick="currentTech(1)">1</a> 
+                        <a href="#tech-info2" class="tech-dot" onclick="currentTech(2)">2</a> 
+                        <a href="#tech-info3" class="tech-dot" onclick="currentTech(3)">3</a> 
+                    </div>
+                    <div class="tech-info-container">
+                        <div class="tech-info" id="tech-info1">
+                            <small>The terminology...</small>
+                            <h3 id="technology-head">Launch vehicle</h3>
+                            <p id="technology-detail">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                        </div>
+                        <div class="tech-info" id="tech-info2">
+                            <small>The terminology...</small>
+                            <h3>spaceport</h3>
+                            <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
+                        </div>
+                        <div class="tech-info" id="tech-info3">
+                            <small>The terminology...</small>
+                            <h3>space capsule</h3>
+                            <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="technology-div">
+                <div id="technology1" class="techy-tech">
+                    <img id="launch" src="images/technology/image-launch-vehicle-portrait.jpg" alt="">
+                </div>
+                <div id="technology2" class="techy-tech">
+                    <img id="spaceport"  src="images//technology/image-spaceport-portrait.jpg" alt="">
+                </div>
+                <div id="technology3" class="techy-tech">
+                    <img id="capsule" src="images/technology/image-space-capsule-portrait.jpg" alt="">
+                </div> 
+            </div>
+        </section>
+    </main>
+<script src="javascipt/script.js"></script>    
+</body>
+</html>
